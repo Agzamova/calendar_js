@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+}
+.container {
+    max-width: 600px;
+    margin: 0 auto;
+    min-height: 100vh;
+    background: #252525;
+    color: #fff;
+    padding: 20px;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+    padding: 0 30px 20px;
+    border-bottom: 1px solid #fff;
+    margin-bottom: 30px;
+}
+#prev, #next {
+    cursor: pointer;
+    color: #FF719F;
+    opacity: 0.5;
+}
+#prev:hover, #next:hover {
+    opacity: 1;
+}
+.weeks {
+    margin-bottom: 30px;
+}
+.weeks, .dates {
+    display: grid;
+    grid-template-columns: repeat(7, minmax(30px, 1fr));
+    grid-gap: 5px;
+    text-align: center;
+    list-style: none;
+    padding: 0;
+}
+.dates li {
+    padding: 12px 0;
+    font-size: 20px;
+}
+.active {
+    border: 1px solid #fff;
+    background: #FF719F;
+    color: #252525;
+    transition: background-color 0.3s ease, color 0.2s linear;
+}
+.active:hover {
+    background-color: #821C3E;
+    color: #fff;
+}
+.dates li:not(active):hover {
+    border: 1px solid #fff;
+}
+.inactive {
+    opacity: 0.3;
+}
